@@ -48,13 +48,13 @@
 
             combo_ralt {
                 timeout-ms = <50>;
-                key-positions = <5 6 7>;
+                key-positions = <6 7 8>;
                 bindings = <&kp RALT>;
             };
 
             combo_rctl {
                 timeout-ms = <50>;
-                key-positions = <6 7 8>;
+                key-positions = <7 8 9>;
                 bindings = <&kp RCTRL>;
             };
     };
