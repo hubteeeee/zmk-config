@@ -29,6 +29,20 @@
     flavor = "tap-preferred";
 };
 
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <1>;
+};
+
+&msc {
+    x-input-code = <INPUT_REL_HWHEEL>;
+    y-input-code = <INPUT_REL_WHEEL>;
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <0>;
+};
+
 #define BASE 0
 #define NUMBER 1
 #define NAVI 2
@@ -99,7 +113,7 @@
     // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
     // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃     1     ┃     2     ┃     3     ┃     \     ┃     '     ┃           ┃
     // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-    //                                     ┃           ┃           ┃           ┃   ┃     0     ┃           ┃           ┃
+    //                                     ┃           ┃           ┃           ┃   ┃           ┃     0     ┃           ┃
     //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             bindings = <
     // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -107,7 +121,7 @@
                     &kp GRAVE   &none       &none       &none       &none           &kp N7      &kp N8      &kp N9      &kp MINUS   &kp EQUAL
                     &kp LGUI    &kp LSHFT   &kp LALT    &kp LCTRL   &none           &kp N4      &kp N5      &kp N6      &kp LBKT    &kp RBKT
         &none       &none       &none       &none       &none       &none           &kp N1      &kp N2      &kp N3      &kp BSLH    &kp SQT     &none
-                                            &trans      &none       &none           &kp N0      &none       &none
+                                            &trans      &none       &none           &none       &kp N0      &none
             >;
         };
 
