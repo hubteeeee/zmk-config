@@ -1,7 +1,7 @@
 if SHIELD_TOTEM_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "totem"
+    default "MCY TOTEM"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
